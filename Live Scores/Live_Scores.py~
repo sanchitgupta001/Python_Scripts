@@ -13,12 +13,12 @@ def sendmessage(message):
 
 def sendscore(body):
     #Your account_sid goes here
-    account_sid = "ACe0e25dca235a802b4370c69231768fcb"
+    account_sid = "ACe0e25dca235a802b4370c692********" # Your account_sid for twilio account
     #Your authorization token goes here
-    auth_token = "558dd9091fef9f98765355f55d451a3c"
+    auth_token = "558dd9091fef9f98765355f5********" # Your auth_token for twiliio account
     client = TwilioRestClient(account_sid, auth_token)
     #to = "number to which SMS should be sent",from_="your twilio number"
-    message = client.messages.create(body=body,to="+919086225038",from_="+16699001403")
+    message = client.messages.create(body=body,to=Number1,from_=Number2) # Number1 and Number2 are contact numbers of the sender and recepients respectively
     print message.sid
 
 while True:
@@ -29,6 +29,6 @@ while True:
     print score_details
     #os.system('notify-send '+ score_details)
     #sendmessage(score_details)
-    #sendscore(score_details)
+    #sendscore(score_details)  
     #print " sent at:%s "%(time.ctime())
     time.sleep(20)

@@ -27,8 +27,8 @@ while True:
     details = cric.handleMatches(match)
     score_details = details[0]['Team']+"\n" + details[0]["Batting team"] + " : " + details[0]['Batting Team Overs']+" Overs - " + details[0]['Batting Team Runs']+"/" +details[0]['Batting Team Wickets'] + "\n" + details[0]['Match Status']
     print score_details
-    #os.system('notify-send '+ score_details)
-    #sendmessage(score_details)
-    #sendscore(score_details)  
+    os.system('notify-send '+ score_details)
+    #sendmessage(score_details)   # Uncomment this for screen notifications on ubuntu
+    #sendscore(score_details)  # Uncomment this for enabling message sending service
     #print " sent at:%s "%(time.ctime())
     time.sleep(20)
